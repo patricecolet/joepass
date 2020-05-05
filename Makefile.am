@@ -17,6 +17,9 @@ cdew/cdewWork.cpp
 J2OBJS = \
 j2/j2.cpp
 
+DIALOGOBJS = \
+dialog/dialog.cpp
+
 GLOBJS = \
 openGLversion/animationView.cpp \
 openGLversion/animationWin.cpp \
@@ -110,10 +113,10 @@ BS_SPECIFIC_LIBS =  -lfreeglut -lglu32 -lopengl32
 #endif
 
 
-nodist_joepass_SOURCES = $(TOOLSOBJS) $(J2OBJS) $(CDEWOBJS) $(GLOBJS) $(UNIOBJS) $(SYSTEMOBJS) $(RUNAROUND) $(LANGOBJ) $(REFACTOREDOBJS) $(BS_SPECIFIC_OBJS)
+nodist_joepass_SOURCES = $(TOOLSOBJS) $(J2OBJS) $(CDEWOBJS) $(DIALOGOBJS) $(GLOBJS) $(UNIOBJS) $(SYSTEMOBJS) $(RUNAROUND) $(LANGOBJ) $(REFACTOREDOBJS) $(BS_SPECIFIC_OBJS)
 
 
-AM_CPPFLAGS = -Iheaders -Isystem -Icdew -Ij2 -IopenGLversion  -Iuniversal -Isystem -Irunaround  -Itools -IlanguageSupport -Irefactoring $(BS_SPECIFIC_INCLUDES)
+AM_CPPFLAGS = -Iheaders -Isystem -Icdew -Idialog -Ij2 -IopenGLversion  -Iuniversal -Isystem -Irunaround  -Itools -IlanguageSupport -Irefactoring $(BS_SPECIFIC_INCLUDES)
 
 #AM_LDFLAGS = $(BS_SPECIFIC_LIBS)
 joepass_LDADD =  -lfreeglut -lglu32 -lopengl32 -lcomdlg32 -lwinmm
