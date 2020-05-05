@@ -45,6 +45,7 @@ using namespace std;
 #define DEF_VARS
 #include "globals.h"
 
+#include "dialog.h"
 
 #include "systemswitch.h"
 
@@ -389,7 +390,7 @@ _myPrintf("argc = %d\n", argc);
 	initAnimation();
 	initInfo();
 	initRunaround( );
-//	initDialog();
+	initDialog();
 	
 	startingUp = true;
 //	callFileSelectorSave( "infoString", workspacePath);
@@ -416,8 +417,12 @@ _myPrintf("argc = %d\n", argc);
 	}
 
 */
-	createInfoWindow( jpPrefs.showInfoWindow );
-	createTextEditor( );
+			if( !comandLineStartedPattern )
+				createInfoWindow( jpPrefs.showInfoWindow );
+
+			if(jpPrefs.showEditorWindow || cmdLineToTextEditor)
+				createTextEditor( );
+			
 	createAnimationWindow();
 	
 	parseArgs(argc, argv);
