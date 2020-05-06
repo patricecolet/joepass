@@ -54,7 +54,7 @@
 #include "cameraControl.h"
 #include "myutil.h"
 #include "myPrintf.h"
-#include "stringtoScreen.h"
+#include "stringtoscreen.h"
 #include "inputWindow.h"
 
 #include "editor.h"

@@ -7,7 +7,7 @@
 #include "systemswitch.h"
 
 
-#include "pathaccess.h"
+#include "pathAccess.h"
 #include "fileaccess.h"
 #include "fileIO.h"
 #include "applicationFolders.h"

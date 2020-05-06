@@ -40,7 +40,7 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "systemSwitch.h"
+#include "systemswitch.h"
 
 #include "preprocess.h"
 #include "pathAccess.h"

@@ -30,7 +30,7 @@
 #include "stdio.h"
 #include "constants.h"
 #include "mydefs.h"
-#include "hCurve.h"
+#include "hcurve.h"
 
 #define PELVIC_POSITION -60.f
 #define BASIC_POSITION  -170.f

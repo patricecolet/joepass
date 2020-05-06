@@ -37,7 +37,7 @@
 #include "animationView.h"
 #include "world.h"
 #include "pathAccess.h"
-#include "fileio.h"
+#include "fileIO.h"
 
 #include "globals.h"
 #include "editor.h"

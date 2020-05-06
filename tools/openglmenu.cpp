@@ -23,7 +23,7 @@ email:       westwolf@netcologne.de
 
 #include "openglmenu.h"
 #include "mydefs.h"
-#include "myUtil.h"
+#include "myutil.h"
 #include "prefDef.h"
 #include "cmdLine.h"
 #include "applicationFolders.h"

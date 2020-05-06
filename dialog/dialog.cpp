@@ -32,10 +32,10 @@
 
 #include "dialog.h"
 #include "dialogClass.h"
-#include "stringToScreen.h"
+#include "stringtoscreen.h"
 #include "grafik.h"
 #include "animationWin.h"
-#include "myUtil.h"
+#include "myutil.h"
 #include "languageSupport.h"
 
 

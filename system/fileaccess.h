@@ -42,7 +42,13 @@
 #define MAX_FULL_FILE_NAME	(_MAX_PATH + _MAX_FNAME)
 #endif
 #endif
-
+// rajout
+#include <stdlib.h>
+#include <linux/limits.h>
+#define MAX_PATTERN_TITLE 	FILENAME_MAX
+#define DIR_SIZE			PATH_MAX
+#define MAX_FULL_FILE_NAME	(PATH_MAX + FILENAME_MAX)
+// fin rajout
 #include "mydefs.h"
 
 #if defined(__cplusplus)

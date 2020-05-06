@@ -29,7 +29,7 @@
 	-----------------------------------------------------------------------*/
 
 #include "systemswitch.h"
-#include "fileAccess.h"
+#include "fileaccess.h"
 #include "pathAccess.h"
 #include "headers.h"
 #include "playSound.h"

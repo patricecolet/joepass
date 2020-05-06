@@ -30,7 +30,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "myUtil.h"
+#include "myutil.h"
 
 #include "causal_editor.h"
 #include "cdewClass.h"

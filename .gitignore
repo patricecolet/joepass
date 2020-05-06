@@ -9,3 +9,6 @@ Makefile.in
 Makefile
 archive/
 autom4te.cache/
+*/.deps/
+*/*/.deps/
+tools/.dirstamp

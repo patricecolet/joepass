@@ -59,7 +59,7 @@
 #include "runaround.h"
 #include "myPrintf.h"
 #include "mydefs.h"
-#include "myUtil.h"
+#include "myutil.h"
 #include "causal_editor.h"
 
 #include "runaroundMenu.h"
