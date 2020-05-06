@@ -44,8 +44,8 @@ runaround/runaroundMenu.cpp
 SYSTEMOBJS = \
 system/win/opensave.cpp \
 system/win/winFileaccess.cpp \
-system/win/winMovie.cpp \
-system/win/winPlaySound.cpp \
+system/unix/unixMovie.cpp \
+system/unix/unixPlaySound.cpp \
 system/movie.cpp \
 system/myutil.cpp \
 system/pathAccess.cpp \
@@ -88,17 +88,16 @@ refactoring/hand.cpp
 
 
 #if SLINUX
-# BS_SPECIFIC_OBJS =
-# system/unix/unix.cpp
-#BS_SPECIFIC_INCLUDES =   -I/usr/include/GL
-#BS_SPECIFIC_LIBS = -lopengl32 -lfreeglut
+BS_SPECIFIC_OBJS = system/unix/unix.cpp
+BS_SPECIFIC_INCLUDES =   -I/usr/include/GL
+BS_SPECIFIC_LIBS = -lopengl32 -lfreeglut
 
 #endif
 
 #if SWIN
-BS_SPECIFIC_OBJS =
-BS_SPECIFIC_INCLUDES =  -I/usr/include/GL -I"C:\msys64\mingw64\include\GL"
-BS_SPECIFIC_LIBS =  -lfreeglut -lglu32 -lopengl32 
+#BS_SPECIFIC_OBJS =
+#BS_SPECIFIC_INCLUDES =  -I/usr/include/GL -I"C:\msys64\mingw64\include\GL"
+#BS_SPECIFIC_LIBS =  -lfreeglut -lglu32 -lopengl32 
 #endif
 
 #if SMAC_OS_X
@@ -119,5 +118,5 @@ nodist_joepass_SOURCES = $(TOOLSOBJS) $(J2OBJS) $(CDEWOBJS) $(DIALOGOBJS) $(GLOB
 AM_CPPFLAGS = -Iheaders -Isystem -Icdew -Idialog -Ij2 -IopenGLversion  -Iuniversal -Isystem -Irunaround  -Itools -IlanguageSupport -Irefactoring $(BS_SPECIFIC_INCLUDES)
 
 #AM_LDFLAGS = $(BS_SPECIFIC_LIBS)
-joepass_LDADD =  -lfreeglut -lglu32 -lopengl32 -lcomdlg32 -lwinmm
-
+#joepass_LDADD =  -lfreeglut -lglu32 -lopengl32 -lcomdlg32 -lwinmm
+joepass_LDADD =  -lglut -lGLU -lGL
