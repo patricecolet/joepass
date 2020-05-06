@@ -42,7 +42,10 @@ So I always include stdlib before opengl under windows to get rid of this.
 #include <GL/glut.h>
 #include <GL/gl.h>
 #else
-#error Failing "unsupported system"
+//#error Failing "unsupported system"
+#include <GL/glut.h>
+#include <stdlib.h>
+#include <GL/gl.h>
 #endif
 #include "opengltools.h"
 
