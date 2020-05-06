@@ -229,7 +229,7 @@ void initJoePass( char *argv0 )
 		atexit( writeJPPrefs );
 	
 	initGrafik( );
-	initSounds();
+	//~ initSounds();
 	
 }
 
@@ -366,7 +366,7 @@ _myPrintf("argc = %d\n", argc);
 	initMovie();
 
 	// hier Zugriff verweigert unter windows
-	initDnd();
+	//~ initDnd();
 	
 /*
  MAC OS X

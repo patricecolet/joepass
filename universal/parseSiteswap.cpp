@@ -830,7 +830,7 @@ void _initSiteswapPattern( char *thePattern, long theCount)
 	beatmapMode = false;
 	jugglersInPattern = 1;
 	setGravity(stdGravity);
-	stopBackgroundSound();
+	//stopBackgroundSound();
 	runaroundDelayWalk = 0.f;
 	
 
@@ -4085,7 +4085,7 @@ wwwBoolean parseSound( void )
  */
 	// get the file name (MAY NOT INCLUDE SPACES!)
 	sprintf(w, "%s", getWord());
-	initBackgroundSound( w );
+	//initBackgroundSound( w );
 	
 
 	

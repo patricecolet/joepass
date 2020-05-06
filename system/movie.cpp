@@ -85,19 +85,20 @@ movie::movie( bool mode )
 	movieSetupFinished = false;
 	screenshotMovieCounter = 0;
 	
-	_initMovie();
+	//~ _initMovie();
 	startMovie( mode );
 }
 
 movie::~movie( void )
 {
-	_exitMovie();
+	//_exitMovie();
 }
 
 
 bool movie::getCompressionInfo( void )
 {
-	return getSysdepCompressionInfo();
+	//return getSysdepCompressionInfo();
+	return false;
 }
 
 
@@ -123,7 +124,7 @@ bool movie::startMovie( bool mode )
 		if( getCompressionInfo() == false )
 				return false;
 		
-		if( _startMovie() == false )
+		//~ if( _startMovie() == false )
 			return false;
 	}
 	
@@ -152,8 +153,8 @@ void movie::endMovie( void )
 	
 	if( addToMovie )
 	{
-		if( theMovieScreenshotMode == movieMode)
-			_endMovie();
+		//~ if( theMovieScreenshotMode == movieMode)
+			//~ _endMovie();
 		
 		movieCounter++;
 		
@@ -304,9 +305,9 @@ bool movie::addFrameToMovie( void )
 		sprintf(p, "%s%s%08d%s", fullMediaSubFolder, ScreenShotFileName, screenshotMovieCounter++, fType);
 		copyFile( p, tmpName);
 		free( p );
-	}else{
+	}/*else{
 		ret = _addFrameToMovie( tmpName );
-	}
+	}*/
 	remove( tmpName);
 	chdir( od );
 	if( ret == false )

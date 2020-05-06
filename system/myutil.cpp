@@ -85,7 +85,7 @@ void _myBeep( void )
     
 #if 01
     Hand dummy;
-	doSound(131, dummy, 3);
+	//~ doSound(131, dummy, 3);
 //      printf("%c", 7 );
 //        putchar( '\a');
 

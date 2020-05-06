@@ -33,7 +33,7 @@ void initIO( void )
 	getcwd( fullPatternPath, MAX_FULL_FILE_NAME);
 	
 	sprintf(fileSelectorPathAndName, "%s", fullPatternPath);   
-	_initIO();
+	//~ _initIO();
 	
 }	
 
@@ -52,17 +52,17 @@ char * selectFolder( char *infoString )
 	else
 		chdir( fullPatternPath );
 
-	ret = fid( infoString);
+	//~ ret = fid( infoString);
 
 	chdir( d );
 
 	// user selected a file
-	if(	ret )
-	{
+	//~ if(	ret )
+	//~ {
 //		buf = readFile( fileSelectorPathAndName, "r");
 //		saveNameAndPath( fileSelectorPathAndName);
 //		printf("reading %s\n", fileSelectorPathAndName);
-	}
+	//~ }
 
 
 	return buf;
@@ -85,17 +85,17 @@ char *selectAndLoadFile( char *infoString )
 	else
 		chdir( fullPatternPath );
 
-	ret = fio( infoString, "pass\0*.pass\0txt\0*.txt\0all\0*.*\0\0");
+	//~ ret = fio( infoString, "pass\0*.pass\0txt\0*.txt\0all\0*.*\0\0");
 
 	chdir( d );
 
 	// user selected a file
-	if(	ret )
-	{
-		buf = readFile( fileSelectorPathAndName, "r");
-		saveNameAndPath( fileSelectorPathAndName);
-//		printf("reading %s\n", fileSelectorPathAndName);
-	}
+	//~ if(	ret )
+	//~ {
+		//~ buf = readFile( fileSelectorPathAndName, "r");
+		//~ saveNameAndPath( fileSelectorPathAndName);
+//~ //		printf("reading %s\n", fileSelectorPathAndName);
+	//~ }
 
 
 	return buf;
@@ -114,18 +114,18 @@ bool saveTextFileAs (char *fbuf, char *name, char *infoString)
 	chdir( fullPatternPath );
 //_myPrintf("dir is %s\n", fullPatternPath);
 
-	ret = fis(infoString, name);
+	//~ ret = fis(infoString, name);
 
 	chdir( d );
 	
 	
 
 	// user selected a file
-	if(	ret )
-	{
-		ret = writeFile( fileSelectorPathAndName, "w", fbuf, strlen( fbuf));
-		saveNameAndPath( fileSelectorPathAndName);
-	}
+	//~ if(	ret )
+	//~ {
+		//~ ret = writeFile( fileSelectorPathAndName, "w", fbuf, strlen( fbuf));
+		//~ saveNameAndPath( fileSelectorPathAndName);
+	//~ }
 
 
 	return ret;

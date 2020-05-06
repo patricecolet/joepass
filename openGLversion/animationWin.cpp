@@ -953,7 +953,7 @@ void jpIdle( void ) {
 		
 		redisplayInfoWindow();
 		redisplayWorldWindow();
-		idleSounds();
+		//idleSounds();
 	}	
     checkForWatchfiles( );
 	check_dndfile( );
@@ -1399,20 +1399,21 @@ void openWorkspaceFunc( int dummy ) {
 #pragma unused (dummy )
 	char t[MAX_PATTERN_TITLE];
 	
-	if( fio( "select workspace file", "pass\0*.pass\0txt\0*.txt\0all\0*.*\0") ){
-		sprintf(t, "%s", fileSelectorPathAndName);
-		_loadCdewWorkspace(t);
-	}
+	//if( fio( "select workspace file", "pass\0*.pass\0txt\0*.txt\0all\0*.*\0") ){
+		//sprintf(t, "%s", fileSelectorPathAndName);
+		//_loadCdewWorkspace(t);
+	//}
 }
 
 void saveWorkspaceAsFunc( int dummy ) {
 #pragma unused (dummy )
 	char t[MAX_PATTERN_TITLE];
-	bool ret;
+	//bool ret;
+	bool ret = false;
 	
 	sprintf( t, "%s", "workspace.pass");
 	// select folder
-	ret = fis( "save workspace file", t);
+	//ret = fis( "save workspace file", t);
 
 	// cancled by user
 	if(	!ret ){
@@ -2157,9 +2158,9 @@ void setTapAnimationValues( int dummy )
 void nextSoundKindFunc( int dummy )
 {
 #pragma unused( dummy)
-	soundKind++;
-	if( soundKind == endOfSoundKinds)
-		soundKind = 0;
+	//soundKind++;
+	//if( soundKind == endOfSoundKinds)
+		//soundKind = 0;
 }	
 
 
@@ -2359,16 +2360,16 @@ void selectWatchFile( int dummy )
 	sprintf(name, "%s", "joe.pass");
 	
 	// call the file selector
-	if( fis(  "select download folder", name)){
-		// write selected path and filename to file
-#if MAC_OS_X_VERSION
-		writeFile( watchfileDownloadPathMac, "w", fileSelectorPathAndName, strlen( fileSelectorPathAndName));
-#else
-		writeFile( watchfileDownloadPathWin, "w", fileSelectorPathAndName, strlen( fileSelectorPathAndName));
-#endif
-		// fis created an empty file. remove it, we don´t want to use this file for an animation 
-		remove(fileSelectorPathAndName);
-	}
+	//if( fis(  "select download folder", name)){
+		//// write selected path and filename to file
+//#if MAC_OS_X_VERSION
+		//writeFile( watchfileDownloadPathMac, "w", fileSelectorPathAndName, strlen( fileSelectorPathAndName));
+//#else
+		//writeFile( watchfileDownloadPathWin, "w", fileSelectorPathAndName, strlen( fileSelectorPathAndName));
+//#endif
+		//// fis created an empty file. remove it, we don´t want to use this file for an animation 
+		//remove(fileSelectorPathAndName);
+	//}
 	
 	// restore file names
 	sprintf( thePatternTitle, "%s", tpt);
@@ -2391,12 +2392,12 @@ void selectExternalEditor( int dummy )
 	sprintf(fspan, "%s", fileSelectorPathAndName);
 	
 	// call the file selector
-	if( fio( "select external editor", "exe\0*.exe\0all\0*.*\0")){
+	//if( fio( "select external editor", "exe\0*.exe\0all\0*.*\0")){
 		// write selected path and filename to file
-		writeFile( externalTextEditorPath, "w", fileSelectorPathAndName, strlen( fileSelectorPathAndName));
+		//writeFile( externalTextEditorPath, "w", fileSelectorPathAndName, strlen( fileSelectorPathAndName));
 		// fis created an empty file. remove it, we don´t want to use this file for an animation 
 //		remove(fileSelectorPathAndName);
-	}
+	//}
 	
 	// restore file names
 	sprintf( thePatternTitle, "%s", tpt);

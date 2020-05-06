@@ -42,8 +42,6 @@ runaround/runaround.cpp \
 runaround/runaroundMenu.cpp
 
 SYSTEMOBJS = \
-system/win/opensave.cpp \
-system/win/winFileaccess.cpp \
 system/unix/unixMovie.cpp \
 system/unix/unixPlaySound.cpp \
 system/movie.cpp \
@@ -51,6 +49,9 @@ system/myutil.cpp \
 system/pathAccess.cpp \
 system/sdInit.cpp \
 system/fileaccess.cpp 
+
+#system/win/opensave.cpp 
+#system/win/winFileaccess.cpp 
 
 TOOLSOBJS = \
 tools/applicationFolders.cpp \
@@ -120,3 +121,31 @@ AM_CPPFLAGS = -Iheaders -Isystem -Icdew -Idialog -Ij2 -IopenGLversion  -Iunivers
 #AM_LDFLAGS = $(BS_SPECIFIC_LIBS)
 #joepass_LDADD =  -lfreeglut -lglu32 -lopengl32 -lcomdlg32 -lwinmm
 joepass_LDADD =  -lglut -lGLU -lGL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

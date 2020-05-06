@@ -286,7 +286,7 @@ prefAtom prefList[] =   {
 	{"dynSoundPos:= ",                                      readBoolean,            writeBoolean,           &jpPrefs.dp},
 	{"playDropSound:= ",                                    readBoolean,            writeBoolean,           &jpPrefs.playDropSound},
 	{"sound:= ",                                            readBoolean,            writeBoolean,           &jpPrefs.s},
-	{"soundKind:= ",                                        readInt,				writeInt,				&soundKind},
+	//~ {"soundKind:= ",                                        readInt,				writeInt,				&soundKind},
 	
 	{"", NULL, NULL, NULL},
 	{"========== runaround ===========================", NULL, NULL, NULL},

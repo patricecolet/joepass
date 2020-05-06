@@ -428,8 +428,8 @@ void setSiteswapStart( sseLoop *sseL ) {
     printEventList( );
 
 	
-	if( isBackgroundSoundDefined() ) 
-	   playBackgroundSound();
+	//~ if( isBackgroundSoundDefined() ) 
+	   //~ playBackgroundSound();
 	
     return;
 }
@@ -1059,10 +1059,10 @@ bool doSingleThrow( sse *theEvent) {
     }
 #endif
     // sound if ball was airborne
-    if( o->rTime > timeStep) {
-        if( jpPrefs.es && !muteSound)
-            doSound( airID, o->thrower,255 );//beep();//
-    }
+    //if( o->rTime > timeStep) {
+        //if( jpPrefs.es && !muteSound)
+            //doSound( airID, o->thrower,255 );//beep();//
+    //}
 
 
     thisDwell = (theEvent->dwell == SS_INIT?handDwell:theEvent->dwell);
@@ -1178,9 +1178,9 @@ bool doSingleThrow( sse *theEvent) {
 
 //    b->invisible = invisibleObjectsFlag |= theEvent->invisible;
 
-    if( 10 )
-        if(	jpPrefs.t && !muteSound)
-            doSound( throwID, o->thrower, theEvent->ss);
+    //if( 10 )
+        //if(	jpPrefs.t && !muteSound)
+            //doSound( throwID, o->thrower, theEvent->ss);
 
     // add throw to info
     //      setNextObjectInfo( b);
@@ -2273,15 +2273,15 @@ punkt moveOneObject( _object *o ) {
                 }
             }
             // Hand schon voll -> anderen Sound spielen
-            if(jpPrefs.s && (1 || o->h2 == false) && !muteSound) {
+            //~ if(jpPrefs.s && (1 || o->h2 == false) && !muteSound) {
 
-                if( theCatch == true) {
-                    doSound( multiCatchID, o->catcher, o->airtime);//beep();//
-                } else {
-                    doSound( catchID, o->catcher,  o->airtime);//beep();//
+                //~ if( theCatch == true) {
+                    //~ doSound( multiCatchID, o->catcher, o->airtime);//beep();//
+                //~ } else {
+                    //~ doSound( catchID, o->catcher,  o->airtime);//beep();//
 
-                }
-            }
+                //~ }
+            //~ }
         }
     }
 
